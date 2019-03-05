@@ -313,7 +313,7 @@ class FlxTween implements IFlxDestroyable
 	public var percent(get, set):Float;
 	public var finished(default, null):Bool;
 	public var scale(default, null):Float = 0;
-	public var backward(get, set):Bool;
+	public var backward:Bool = false;
 	
 	/**
 	 * How many times this tween has been executed / has finished so far - useful to 
@@ -648,14 +648,6 @@ class FlxTween implements IFlxDestroyable
 	function set_percent(value:Float):Float
 	{ 
 		return _secondsSinceStart = duration * value + _delayToUse;
-	}
-
-	inline function get_backward():Bool {
-		return backward;
-	}
-
-	function set_backward(value:Bool):Bool {
-		return backward = value;
 	}
 	
 	function set_type(value:Int):Int
