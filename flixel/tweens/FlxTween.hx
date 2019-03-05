@@ -649,6 +649,14 @@ class FlxTween implements IFlxDestroyable
 	{ 
 		return _secondsSinceStart = duration * value + _delayToUse;
 	}
+
+	inline function get_backward():Bool {
+		return backward;
+	}
+
+	function set_backward(value:Bool):Bool {
+		return backward = value;
+	}
 	
 	function set_type(value:Int):Int
 	{
